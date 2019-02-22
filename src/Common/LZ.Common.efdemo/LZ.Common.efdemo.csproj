@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LZ.Common" Version="3.0.1" />
+    <PackageReference Include="LZ.Common.Logging.Serilog" Version="3.0.0" />
+  </ItemGroup>
+
+</Project>

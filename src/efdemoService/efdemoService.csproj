@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeIdentifiers>rhel.7.2-x64;win10-x64;win81-x64;win8-x64;win7-x86</RuntimeIdentifiers>
+    <VersionPrefix>1.1.0</VersionPrefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LZ.Common" Version="3.0.1" />
+    <PackageReference Include="LZ.Common.Logging.Serilog" Version="3.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="3.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\LZ.BusinessLayer.efdemo\LZ.BusinessLayer.efdemo.csproj" />
+    <ProjectReference Include="..\Common\LZ.Common.efdemo\LZ.Common.efdemo.csproj" />
+    <ProjectReference Include="..\Controllers\LZ.Controllers.efdemo\LZ.Controllers.efdemo.csproj" />
+    <ProjectReference Include="..\DataLayer\LZ.DataLayer.efdemo.Context\LZ.DataLayer.efdemo.Context.csproj" />
+    <ProjectReference Include="..\DataLayer\LZ.DataLayer.efdemo.Repository\LZ.DataLayer.efdemo.Repository.csproj" />
+    <ProjectReference Include="..\Mappers\LZ.Mappers.efdemo\LZ.Mappers.efdemo.csproj" />
+    <ProjectReference Include="..\Models\LZ.Models.efdemo.Domain\LZ.Models.efdemo.Domain.csproj" />
+    <ProjectReference Include="..\Models\LZ.Models.efdemo.Dto\LZ.Models.efdemo.Dto.csproj" />
+    <ProjectReference Include="..\Models\LZ.Models.efdemo.Entity\LZ.Models.efdemo.Entity.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Xdt.Tools" Version="2.0.0" />    
+  </ItemGroup>
+  
+  <Target Name="ApplyXdtConfigTransform" BeforeTargets="_TransformWebConfig">
+    <PropertyGroup>
+      <_SourceWebConfig>$(MSBuildThisFileDirectory)Web.config</_SourceWebConfig>
+      <_XdtTransform>$(MSBuildThisFileDirectory)Web.$(API_SERVICE_ENV).config</_XdtTransform>
+      <_TargetWebConfig>$(PublishDir)Web.config</_TargetWebConfig>
+    </PropertyGroup>
+    <Exec Command="dotnet transform-xdt --xml &quot;$(_SourceWebConfig)&quot; --transform &quot;$(_XdtTransform)&quot; --output &quot;$(_TargetWebConfig)&quot;" Condition="Exists('$(_XdtTransform)')" />
+  </Target>
+</Project>

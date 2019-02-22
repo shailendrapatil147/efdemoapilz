@@ -3,3 +3,27 @@
 ################################################################################
 
 /src/Controllers/LZ.Controllers.efdemo/obj
+/src/Controllers/LZ.Controllers.efdemo/bin/Debug
+/src/Common/LZ.Common.efdemo/bin/Debug/netcoreapp2.1
+/src/BusinessLayer/LZ.BusinessLayer.efdemo/obj
+/src/BusinessLayer/LZ.BusinessLayer.efdemo/bin/Debug/netcoreapp2.1
+/src/DataLayer/LZ.DataLayer.efdemo.Context/obj
+/src/DataLayer/LZ.DataLayer.efdemo.Context/bin/Debug/netcoreapp2.1
+/src/DataLayer/LZ.DataLayer.efdemo.Repository/bin/Debug/netcoreapp2.1
+/src/Common/LZ.Common.efdemo/obj
+/src/efdemoService/bin/Debug/netcoreapp2.1
+/src/DataLayer/LZ.DataLayer.efdemo.Repository/obj
+/src/efdemoService/obj
+/src/Mappers/LZ.Mappers.efdemo/obj
+/src/Models/LZ.Models.efdemo.Domain/obj
+/src/Models/LZ.Models.efdemo.Domain/bin/Debug/netcoreapp2.1
+/src/Models/LZ.Models.efdemo.Dto/bin/Debug/netcoreapp2.1
+/src/Models/LZ.Models.efdemo.Dto/obj
+/src/Mappers/LZ.Mappers.efdemo/bin/Debug/netcoreapp2.1
+/src/Models/LZ.Models.efdemo.Entity/bin/Debug/netcoreapp2.1
+/src/Models/LZ.Models.efdemo.Entity/obj
+/src/ServiceClients/LZ.ServiceClient.DummyService/bin/Debug/netcoreapp2.1
+/src/ServiceClients/LZ.ServiceClient.DummyService/obj
+/src/Tests/Test.LZ.efdemo/bin/Debug/netcoreapp2.1
+/src/Tests/Test.LZ.efdemo/obj
+/src/efdemoService/efdemoService.csproj.user

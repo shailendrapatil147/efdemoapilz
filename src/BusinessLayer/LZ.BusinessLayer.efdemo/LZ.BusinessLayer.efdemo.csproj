@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LZ.Common" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\LZ.Common.efdemo\LZ.Common.efdemo.csproj" />
+    <ProjectReference Include="..\..\DataLayer\LZ.DataLayer.efdemo.Repository\LZ.DataLayer.efdemo.Repository.csproj" />
+    <ProjectReference Include="..\..\Models\LZ.Models.efdemo.Domain\LZ.Models.efdemo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

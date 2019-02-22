@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Models\LZ.Models.efdemo.Domain\LZ.Models.efdemo.Domain.csproj" />
+    <ProjectReference Include="..\..\Models\LZ.Models.efdemo.Dto\LZ.Models.efdemo.Dto.csproj" />
+    <ProjectReference Include="..\..\Models\LZ.Models.efdemo.Entity\LZ.Models.efdemo.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
